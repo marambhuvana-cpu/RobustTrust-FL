@@ -1,0 +1,72 @@
+seed: 42
+device: auto
+method: robusttrust
+output_dir: results/ton_iot
+
+dataset:
+  name: TON_IoT
+  raw_dir: data/raw
+  label_column: null
+  max_rows: null
+  synthetic_samples: 12000
+  synthetic_features: 24
+  synthetic_classes: 4
+
+model:
+  dropout: 0.30
+
+federated:
+  num_clients: 100
+  participation_fraction: 0.20
+  rounds: 200
+  partition: dirichlet
+  dirichlet_alpha: 0.5
+  exploration: 0.10
+
+training:
+  local_epochs: 5
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  fedprox_mu: 0.01
+  early_stopping_patience: 10
+  validation_loss_tolerance: 0.20
+
+privacy:
+  enabled: true
+  clipping: 1.0
+  noise_multiplier: 0.80
+  delta: 0.00001
+  max_epsilon: 8.0
+
+attacks:
+  type: mixed
+  malicious_ratio: 0.20
+  activation_round: 11
+  sign_scale: 5.0
+  replacement_scale: 10.0
+  backdoor_rate: 0.20
+
+attackshield:
+  threshold: 0.60
+  weights: [0.25, 0.25, 0.25, 0.25]
+  reference: mean
+
+trust:
+  weights: [0.25, 0.20, 0.15, 0.15, 0.25]
+  memory: 0.80
+  penalty: 0.50
+  high: 0.70
+  low: 0.30
+
+straggler:
+  freshness_decay: 0.30
+  max_age: 3
+  min_sync_ratio: 0.70
+  max_wait_s: 30.0
+
+aggregation:
+  max_client_weight: 0.30
+
+baseline:
+  trim_ratio: 0.20
