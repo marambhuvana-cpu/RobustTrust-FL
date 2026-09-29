@@ -445,8 +445,7 @@ The project documentation currently provides this placeholder:
 ``` bibtex
 @article{robusttrustfl,
   title   = {RobustTrust-FL: A Trust-Aware and Attack-Resilient Federated Learning Framework for Scalable Privacy-Preserving Distributed Intelligence},
-  author  = {Authors to be updated},
-  journal = {Journal information to be updated},
+  author  = {A.Bhuvaneshvari},,
   year    = {2026}
 }
 ```
