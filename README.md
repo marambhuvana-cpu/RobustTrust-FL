@@ -1,4 +1,3 @@
-# 
 
 [![DOI](https://zenodo.org/badge/1395152605.svg)](https://doi.org/10.5281/zenodo.23040170)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-RobustTrust--FL-blue?logo=github)](https://github.com/marambhuvana-cpu/RobustTrust-FL)
