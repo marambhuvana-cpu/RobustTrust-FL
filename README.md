@@ -429,11 +429,8 @@ architecture, and hyperparameters.
 
 ## License
 
-No license is specified here. Select and add a `LICENSE` file before
-public release once the intended permissions and redistribution
-requirements have been decided. The project documentation mentions MIT
-License and Apache License 2.0 as options to consider; make sure you
-have the rights to license all included code and materials.
+This project is licensed under the MIT License.
+
 
 ## Citation
 
